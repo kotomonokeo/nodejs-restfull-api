@@ -8,7 +8,7 @@ const removeTestUser = async () => {
     },
   });
 };
-bcrypt
+
 const createTestUser = async () => {
   await prismaClient.user.create({
     data: {
