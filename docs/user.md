@@ -5,7 +5,7 @@
 Endpoint : POST /api/users/
 
 Request Body :
-b 
+
 ```json
 {
   "username": "admin",
@@ -101,7 +101,7 @@ Response Body Error
 
 ## Get User API
 
-Endpoint : GET /api/users
+Endpoint : GET /api/users/current
 
 Headers : 
 - Authorization : token

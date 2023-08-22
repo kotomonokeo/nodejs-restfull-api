@@ -1,5 +1,5 @@
 import { prismaClient } from "../src/application/database";
-import bcrypt from "bcrypt"
+import bcrypt from "bcrypt";
 
 const removeTestUser = async () => {
   await prismaClient.user.deleteMany({
@@ -20,7 +20,12 @@ const createTestUser = async () => {
   });
 };
 
-export {
-  removeTestUser,
-  createTestUser
-}
+const getTestUser = async () => {
+  return prismaClient.user.findUnique({
+    where: {
+      username: "test",
+    },
+  });
+};
+
+export { removeTestUser, createTestUser, getTestUser };
