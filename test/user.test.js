@@ -11,15 +11,15 @@ describe("POST /api/users", () => {
 
   it("should can register new user", async () => {
     const result = await supertest(web).post("/api/users").send({
-      username: "rahasia",
+      username: "test",
       password: "rahasia",
-      name: "rahasia",
+      name: "test",
     });
     
     logger.info(result.body);
 
     expect(result.status).toBe(200);
-    expect(result.body.data.username).toBe("rahasia");
+    expect(result.body.data.username).toBe("test");
     expect(result.body.data.password).toBeUndefined();
   });
 
