@@ -4,7 +4,7 @@ import {
   loginUserValidation,
   registerUserValidation,
   updateUserValidation,
-} from "../validation/user-validation.js";
+} from "./user-validation.js";
 import { validate } from "../validation/validation.js";
 import { ResponseError } from "../error/response-error.js";
 import bcrypt from "bcrypt";

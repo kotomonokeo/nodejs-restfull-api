@@ -1,5 +1,5 @@
 import supertest from "supertest";
-import { web } from "../src/application/web.js";
+import { web } from "../application/web";
 import {
   createContactTest,
   createManyTestContacts,
@@ -7,8 +7,8 @@ import {
   getTestContact,
   removeAllTestContacts,
   removeTestUser,
-} from "./test-util";
-import { logger } from "../src/application/logging.js";
+} from "../test/test-util.js";
+import { logger } from "../application/logging.js";
 
 describe("POST /api/contacts", () => {
   beforeEach(async () => {
@@ -221,7 +221,7 @@ describe("GET /api/contacts", () => {
     const result = await supertest(web)
       .get("/api/contacts")
       .query({
-        page: 2
+        page: 2,
       })
       .set("Authorization", "test");
 
@@ -238,7 +238,7 @@ describe("GET /api/contacts", () => {
     const result = await supertest(web)
       .get("/api/contacts")
       .query({
-        name: "test 1"
+        name: "test 1",
       })
       .set("Authorization", "test");
 
@@ -255,7 +255,7 @@ describe("GET /api/contacts", () => {
     const result = await supertest(web)
       .get("/api/contacts")
       .query({
-        email: "test1"
+        email: "test1",
       })
       .set("Authorization", "test");
 
@@ -272,7 +272,7 @@ describe("GET /api/contacts", () => {
     const result = await supertest(web)
       .get("/api/contacts")
       .query({
-        phone: "089806070901"
+        phone: "089806070901",
       })
       .set("Authorization", "test");
 

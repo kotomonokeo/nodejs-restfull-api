@@ -1,5 +1,5 @@
 import { logger } from "../application/logging";
-import contactService from "../service/contact-service";
+import contactService from "./contact-service";
 
 const create = async (req, res, next) => {
   try {
