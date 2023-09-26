@@ -127,7 +127,7 @@ describe("GET /api/contacts/:contactId/addresses/:addressId", function () {
     expect(result.status).toBe(404);
   });
 
-  it("should reject if contact is not found", async () => {
+  it("should reject if address is not found", async () => {
     const testContact = await getTestContact();
     const testAddress = await getTestAddress();
 
